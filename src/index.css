@@ -15,7 +15,7 @@ h1 {
   color: rgba(255, 255, 255, 0.89);
 }
 .card {
-  background-color: rgba(255, 255, 255, 0.46);
+  background-color: rgba(249 249 249 / 88%);
   max-width: 300px;
   min-height: 400px;
   padding: 10px;
