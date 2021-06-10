@@ -1,5 +1,4 @@
 import Sentence from './containers';
-import './App.css';
 
 function App() {
   return (

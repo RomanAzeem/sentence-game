@@ -1,15 +1,14 @@
-import React, { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import WhoQuestionForm from './forms/WhoQuestionForm';
 import WhatQuestionForm from './forms/WhatQuestionForm';
 import WhenQuestionForm from './forms/WhenQuestionForm';
 import WhereQuestionForm from './forms/WhereQuestionForm';
-import Confirm from './forms/Confirm';
 import Result from './forms/Result';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreator, State } from '../state';
 
-const Sentence: React.FC<any> = (props) => {
+const Sentence = () => {
   const dispatch = useDispatch();
   const {
     PrevStep,
@@ -42,7 +41,6 @@ const Sentence: React.FC<any> = (props) => {
             getQuestion={getWhatQuestion}
           />
         );
-
       case 3:
         return (
           <WhenQuestionForm
@@ -52,7 +50,6 @@ const Sentence: React.FC<any> = (props) => {
             getQuestion={getWhenQuestion}
           />
         );
-
       case 4:
         return (
           <WhereQuestionForm
