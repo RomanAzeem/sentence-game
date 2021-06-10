@@ -64,17 +64,6 @@ const Sentence: React.FC<any> = (props) => {
         );
       case 5:
         return (
-          <Confirm
-            prevStep={PrevStep}
-            nextStep={NextStep}
-            who={who}
-            what={what}
-            when={when}
-            where={where}
-          />
-        );
-      case 6:
-        return (
           <Result
             prevStep={PrevStep}
             who={who}
