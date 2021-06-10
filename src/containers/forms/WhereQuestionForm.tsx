@@ -12,10 +12,10 @@ interface WhereQuestionProps {
 const WhereQuestionForm = (props: WhereQuestionProps) => {
   return (
     <Fragment>
-      <div>
+      <div className='card center'>
         <form>
           <InputField
-            label={'What Question'}
+            label={'Where ?'}
             type={'string'}
             value={props.answer}
             onChange={(e: any) => props.getQuestion(e.target.value)}

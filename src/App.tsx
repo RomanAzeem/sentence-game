@@ -3,8 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className='App'>
-      <Sentence />
+    <div className='container'>
+      <div className='main center'>
+        <h1>Answer to Complete Sentence</h1>
+        <Sentence />
+      </div>
     </div>
   );
 }

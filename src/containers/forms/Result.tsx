@@ -1,6 +1,8 @@
-import React, { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
+import SubmitButton from '../../components/SubmitButton';
 interface ResultProps {
+  prevStep: () => void;
   who: string;
   what: string;
   when: string;
@@ -10,7 +12,14 @@ interface ResultProps {
 const Result = (props: ResultProps) => {
   return (
     <Fragment>
-      <div>{`${props.who} ${props.what} ${props.where} ${props.when}`}</div>
+      <div className='card center'>
+        <strong className='sentence'>{`${props.who} ${props.what} ${props.where} ${props.when}`}</strong>
+        <SubmitButton
+          type={'button'}
+          value={'Back'}
+          onClick={props.prevStep}
+        ></SubmitButton>
+      </div>
     </Fragment>
   );
 };

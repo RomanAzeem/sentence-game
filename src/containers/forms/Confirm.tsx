@@ -12,39 +12,63 @@ interface ConfirmProps {
 const Confirm = (props: ConfirmProps) => {
   return (
     <Fragment>
-      <div>
-        <div>
+      <div className='card center'>
+        <div className='validator'>
           {' '}
-          {props.who === ''
-            ? `Please Enter Who Question to complete the Sentence`
-            : `Who Question is : ${props.who}`}{' '}
+          {props.who === '' ? (
+            <span>
+              <strong>Who:</strong>
+              {` Question "Who" is required`}
+              <span style={{ color: ' rgb(178,4,4)' }}>*</span>
+            </span>
+          ) : (
+            `Who: ${props.who}`
+          )}{' '}
         </div>
-        <div>
+        <div className='validator'>
           {' '}
-          {props.what === ''
-            ? `Please Enter What Question to complete the Sentence`
-            : `What Question is : ${props.what}`}{' '}
+          {props.what === '' ? (
+            <span>
+              <strong>What:</strong>
+              {` Question "What" is required`}
+              <span style={{ color: ' rgb(178,4,4)' }}>*</span>
+            </span>
+          ) : (
+            `What: ${props.what}`
+          )}{' '}
         </div>
-        <div>
+        <div className='validator'>
           {' '}
-          {props.where === ''
-            ? `Please Enter Where Question to complete the Sentence`
-            : `Where Question is : ${props.where}`}{' '}
+          {props.when === '' ? (
+            <span>
+              <strong>When:</strong>
+              {` Question "When" required`}
+              <span style={{ color: ' rgb(178,4,4)' }}>*</span>
+            </span>
+          ) : (
+            `When: ${props.when}`
+          )}{' '}
         </div>
-        <div>
+        <div className='validator'>
           {' '}
-          {props.when === ''
-            ? `Please Enter When Question to complete the Sentence`
-            : `When Question is : ${props.when}`}{' '}
+          {props.where === '' ? (
+            <span>
+              <strong>Where:</strong>
+              {` Question "Where" is required`}
+              <span style={{ color: ' rgb(178,4,4)' }}>*</span>
+            </span>
+          ) : (
+            `Where: ${props.where}`
+          )}{' '}
         </div>
         <SubmitButton
           type={'button'}
           value={'Back'}
           onClick={props.prevStep}
         ></SubmitButton>
-        {props.who !== '' ||
-        props.what !== '' ||
-        props.when !== '' ||
+        {props.who !== '' &&
+        props.what !== '' &&
+        props.when !== '' &&
         props.where !== '' ? (
           <SubmitButton
             type={'submit'}
@@ -52,7 +76,7 @@ const Confirm = (props: ConfirmProps) => {
             onClick={props.nextStep}
           ></SubmitButton>
         ) : (
-          <div>
+          <div className='validator note'>
             Please Submit answers to all the questions to Complete the Sentence
           </div>
         )}

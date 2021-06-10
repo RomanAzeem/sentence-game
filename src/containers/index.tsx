@@ -74,7 +74,15 @@ const Sentence: React.FC<any> = (props) => {
           />
         );
       case 6:
-        return <Result who={who} what={what} when={when} where={where} />;
+        return (
+          <Result
+            prevStep={PrevStep}
+            who={who}
+            what={what}
+            when={when}
+            where={where}
+          />
+        );
       default:
         break;
     }

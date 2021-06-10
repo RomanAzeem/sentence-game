@@ -12,10 +12,10 @@ interface WhenQuestionProps {
 const WhenQuestionForm = (props: WhenQuestionProps) => {
   return (
     <Fragment>
-      <div>
+      <div className='card center'>
         <form>
           <InputField
-            label={'When Question'}
+            label={'When ?'}
             type={'string'}
             value={props.answer}
             onChange={(e: any) => props.getQuestion(e.target.value)}

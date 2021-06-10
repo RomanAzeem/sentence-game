@@ -11,17 +11,15 @@ const InputField = (props: InputFieldProps) => {
   return (
     <Fragment>
       <div>
-        <label>
-          {props.label}
-          <span>
-            <input
-              type={props.type}
-              required
-              onChange={props.onChange}
-              value={props.value}
-            ></input>
-          </span>
-        </label>
+        <label>{props.label}</label>
+      </div>
+      <div>
+        <input
+          type={props.type}
+          required
+          onChange={props.onChange}
+          value={props.value}
+        ></input>
       </div>
     </Fragment>
   );

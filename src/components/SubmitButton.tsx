@@ -9,7 +9,7 @@ interface SubmitButtonProps {
 const SubmitButton = (props: SubmitButtonProps) => {
   return (
     <Fragment>
-      <div>
+      <div className='center'>
         <button
           type={props.type}
           onClick={() => {

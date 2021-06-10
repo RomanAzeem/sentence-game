@@ -12,10 +12,10 @@ interface WhatQuestionProps {
 const WhatQuestionForm = (props: WhatQuestionProps) => {
   return (
     <Fragment>
-      <div>
+      <div className='card center'>
         <form>
           <InputField
-            label={'What Question'}
+            label={'What ?'}
             type={'string'}
             value={props.answer}
             onChange={(e: any) => props.getQuestion(e.target.value)}
