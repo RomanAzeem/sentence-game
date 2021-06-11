@@ -21,11 +21,7 @@ const WhoQuestionForm = (props: WhoQuestionProps) => {
               props.getQuestion(e.target.value)
             }
           ></InputField>
-          <SubmitButton
-            type={'submit'}
-            value={'Next'}
-            onClick={props.nextStep}
-          ></SubmitButton>
+          <SubmitButton value={'Next'} onClick={props.nextStep}></SubmitButton>
         </form>
       </div>
     </Fragment>

@@ -22,16 +22,8 @@ const WhereQuestionForm = (props: WhereQuestionProps) => {
               props.getQuestion(e.target.value)
             }
           ></InputField>
-          <SubmitButton
-            type={'button'}
-            value={'Back'}
-            onClick={props.prevStep}
-          ></SubmitButton>
-          <SubmitButton
-            type={'submit'}
-            value={'Next'}
-            onClick={props.nextStep}
-          ></SubmitButton>
+          <SubmitButton value={'Back'} onClick={props.prevStep}></SubmitButton>
+          <SubmitButton value={'Next'} onClick={props.nextStep}></SubmitButton>
         </form>
       </div>
     </Fragment>

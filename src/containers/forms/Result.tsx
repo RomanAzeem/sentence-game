@@ -14,11 +14,7 @@ const Result = (props: ResultProps) => {
     <Fragment>
       <div className='card center'>
         <strong className='sentence'>{`${props.who} ${props.what} ${props.where} ${props.when}`}</strong>
-        <SubmitButton
-          type={'button'}
-          value={'Back'}
-          onClick={props.prevStep}
-        ></SubmitButton>
+        <SubmitButton value={'Back'} onClick={props.prevStep}></SubmitButton>
       </div>
     </Fragment>
   );
