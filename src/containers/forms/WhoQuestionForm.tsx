@@ -17,7 +17,9 @@ const WhoQuestionForm = (props: WhoQuestionProps) => {
             label={'Who ?'}
             type={'string'}
             value={props.answer}
-            onChange={(e: any) => props.getQuestion(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
+              props.getQuestion(e.target.value)
+            }
           ></InputField>
           <SubmitButton
             type={'submit'}

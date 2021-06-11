@@ -18,7 +18,9 @@ const WhenQuestionForm = (props: WhenQuestionProps) => {
             label={'When ?'}
             type={'string'}
             value={props.answer}
-            onChange={(e: any) => props.getQuestion(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
+              props.getQuestion(e.target.value)
+            }
           ></InputField>
           <SubmitButton
             type={'button'}
